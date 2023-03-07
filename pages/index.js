@@ -3,7 +3,7 @@ import { places } from "../data/places";
 import PlaceCard from "../components/PlaceCard";
 import Link from "next/link";
 
-export default function HomePage({ isLarge }) {
+export default function HomePage() {
   const [randomPlace, setRandomPlace] = useState(null);
   useEffect(() => {
     const randomIndex = Math.floor(Math.random() * places.length);
@@ -16,7 +16,7 @@ export default function HomePage({ isLarge }) {
     <>
       <h2>Homepage</h2>
       <h3>Place of the week</h3>
-      <PlaceCard place={randomPlace} isLarge={isLarge} />
+      <PlaceCard place={randomPlace} />
       <Link href="/places">See all places</Link>
     </>
   );

@@ -1,5 +1,9 @@
 import styled from "styled-components";
-export default function Header({ isLarge, onSetIsLarge }) {
+import { LargeImage } from "../../context/LargeImage";
+import { useContext } from "react";
+export default function Header() {
+  const isLarge = useContext(LargeImage).isLarge;
+  const onSetIsLarge = useContext(LargeImage).handleSetIsLarge;
   return (
     <StyledHeader>
       <div>

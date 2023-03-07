@@ -1,10 +1,10 @@
 import PlaceList from "../components/PlaceList";
 import Link from "next/link";
 
-export default function PlacesPage({ isLarge }) {
+export default function PlacesPage() {
   return (
     <>
-      <PlaceList isLarge={isLarge} />
+      <PlaceList />
       <Link href="/">Back to Home</Link>
     </>
   );
